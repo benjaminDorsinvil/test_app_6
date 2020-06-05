@@ -1,3 +1,15 @@
 <h1>Hello world!</h1>
-<p>This is where the paragraph will be  <a href="">Text here</a></p>
+<p>This is where the paragraph will be <%= link_to "about", about_path %> </p>
+<br>
+
+<%= link_to 'articles', articles_path %>
+
+<p><b> The name of the file library in the directory is: </b></p>
+<% @files.each do |file| %>
+<% if file == "lib" %>
+<%= file %> <br>
+<% end %>
+<% end %>
+
+<p><%= link_to 'About page', about_path %></p>
 
